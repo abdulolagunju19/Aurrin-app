@@ -1,33 +1,28 @@
 import {
-  Box,
   Flex,
-  Link as ChakraLink,
   Text,
   Stack,
   VStack,
-  Heading,
-  Spacer,
-  useBoolean,
 } from "@chakra-ui/react";
+
 import Image from "next/image";
 
 import Layout from "../../components/Layout";
-import MenuCustom from "../../components/MenuCustom";
 import { TypewritterEffect } from "../../components/TypewriterEffect";
 export default function MyGoal() {
-  const [isMenuOpen, setIsMenuOpen] = useBoolean();
   return (
     <Layout>
       <Flex
         align={"center"}
         justify={"center"}
-        minH={"xl"}
+        minH={"md"}
         pt={10}
         pb={10}
         bg="gray.50"
       >
         <VStack>
-          <Stack align={"center"} p={6} alignItems={"center"}>
+          <Stack align={"center"} p={3} alignItems={"center"}>
+            <Image src="/logo.png" width={250} height={250}/>
             <Flex
               bgGradient="linear(to-l, #7F7FD5, #91EAE4)"
               bgClip="text"
@@ -38,7 +33,7 @@ export default function MyGoal() {
               <TypewritterEffect />
             </Flex>
             <Text fontWeight={"normal"} fontSize={"lg"} color={"gray.600"}>
-              make better financial decisions
+              Your Well-being, Our Priority.
             </Text>
           </Stack>
         </VStack>

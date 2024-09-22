@@ -106,7 +106,7 @@ export default function MyGoal() {
           {/* --> Heading <-- */}
           <Stack align={"center"} p={6} bgGradient="linear(to-l, #7F7FD5, #91EAE4)" bgClip="text">
             <Heading align={"center"} fontSize={"4xl"}>
-              {`Plan your big life goals`}
+              {`Plan your Retirement`}
             </Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
               in less than 30 seconds
@@ -318,8 +318,8 @@ export default function MyGoal() {
                         <Text fontSize={"xl"} fontWeight={"semibold"}>
                           By investing{" "}
                         </Text>
-                        <Heading>{`₹${table[0].monthlySavingsGoal.toLocaleString("en-IN")} /month`}</Heading>
-                        <Text>{`You would have a net worth of ₹${table[0].amountOfSavingsInLifetime.toLocaleString("en-IN")} in ${retirementAge - currentAge} years `}</Text>
+                        <Heading>{`$${table[0].monthlySavingsGoal.toLocaleString("en-CA")} /month`}</Heading>
+                        <Text>{`You would have a net worth of $${table[0].amountOfSavingsInLifetime.toLocaleString("en-CA")} in ${retirementAge - currentAge} years `}</Text>
                       </Stack>
                     </Box>
                     <Box rounded={"lg"} bg={"white"} boxShadow={"lg"} p={8}>
@@ -339,8 +339,8 @@ export default function MyGoal() {
                             <Tbody>
                               <Tr>
                                 <Td fontWeight={"bold"}>Net Worth</Td>
-                                <Td>₹{currentSavings.toLocaleString("en-IN")}</Td>
-                                <Td isNumeric>₹{table[0].amountOfSavingsInLifetime.toLocaleString("en-IN")}</Td>
+                                <Td>${currentSavings.toLocaleString("en-IN")}</Td>
+                                <Td isNumeric>${table[0].amountOfSavingsInLifetime.toLocaleString("en-CA")}</Td>
                               </Tr>
                             </Tbody>
                           </Table>
@@ -368,9 +368,9 @@ export default function MyGoal() {
                                 return (
                                   <Tr>
                                     <Td>{data.age}</Td>
-                                    <Td>₹{data.monthlySavingsGoal.toLocaleString("en-IN")}</Td>
+                                    <Td>${data.monthlySavingsGoal.toLocaleString("en-CA")}</Td>
                                     <Td fontWeight={"semibold"} color={data.age < retirementAge ? "green.500" : "red.500"}>
-                                      ₹{data.cumulativeSavings.toLocaleString("en-IN")}
+                                      ${data.cumulativeSavings.toLocaleString("en-CA")}
                                     </Td>
                                   </Tr>
                                 );

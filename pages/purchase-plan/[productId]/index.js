@@ -118,9 +118,9 @@ export default function MyGoal() {
         <VStack>
           {/* --> Heading <-- */}
           <Stack align={"center"} p={6} bgGradient="linear(to-l, #7F7FD5, #91EAE4)" bgClip="text">
-            <Heading fontSize={"4xl"}>{`Buying your dream ${router.query.productId}`}</Heading>
+            <Heading fontSize={"4xl"}>{`Buy your dream ${router.query.productId}`}</Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
-              is easy when your plan it ahead of time
+              Plan it ahead of time
             </Text>
           </Stack>
           {/* Change the width of the wrap  */}
@@ -256,8 +256,8 @@ export default function MyGoal() {
                         <Text fontSize={"xl"} fontWeight={"semibold"}>
                           By investing{" "}
                         </Text>
-                        <Heading>{`${table[0].investment.toLocaleString("en-IN")} / month`}</Heading>
-                        <Text>{`You would have a saved ₹${table[table.length - 1].finalValue.toLocaleString("en-IN")}${productName && ` to buy your ${productName}`} in ${timeline} ${
+                        <Heading>{`${table[0].investment.toLocaleString("en-CA")} / month`}</Heading>
+                        <Text>{`You would have a saved $${table[table.length - 1].finalValue.toLocaleString("en-CA")}${productName && ` to buy your ${productName}`} in ${timeline} ${
                           timeline === 1 ? "year" : "years"
                         } `}</Text>
                       </Stack>
@@ -281,8 +281,8 @@ export default function MyGoal() {
                               <Tr>
                                 <Td fontWeight={"bold"}>Product Cost</Td>
 
-                                <Td>₹{cost.toLocaleString("en-IN")}</Td>
-                                <Td isNumeric>₹{inflationAdjustedPrice.toLocaleString("en-IN")}</Td>
+                                <Td>${cost.toLocaleString("en-CA")}</Td>
+                                <Td isNumeric>${inflationAdjustedPrice.toLocaleString("en-CA")}</Td>
                               </Tr>
                             </Tbody>
                           </Table>
@@ -325,9 +325,9 @@ return {
   */}
 
                                     <Td>{data.months / 12}</Td>
-                                    <Td>₹{data.investment.toLocaleString("en-IN")}</Td>
-                                    <Td>₹{data.earnings.toLocaleString("en-IN")}</Td>
-                                    <Td fontWeight={"semibold"}>₹{data.finalValue.toLocaleString("en-IN")}</Td>
+                                    <Td>${data.investment.toLocaleString("en-CA")}</Td>
+                                    <Td>${data.earnings.toLocaleString("en-CA")}</Td>
+                                    <Td fontWeight={"semibold"}>${data.finalValue.toLocaleString("en-CA")}</Td>
                                   </Tr>
                                 );
                               })}

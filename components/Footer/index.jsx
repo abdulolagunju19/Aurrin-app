@@ -14,6 +14,7 @@ import {
 
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
+import Image from "next/image";
 
 const Logo = (props) => {
   return (
@@ -80,10 +81,11 @@ export default function LargeWithNewsletter() {
         >
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue("gray.700", "white")} />
+              <Image src="/logo.png" height={100} width={100}/>
+              {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
             </Box>
             <Text fontSize={"sm"}>
-              © 2022 Joel Mascarenhas. All rights reserved
+              © 2024 Aurrin. All rights reserved.
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton label={"Twitter"} href={"#"}>
@@ -100,7 +102,6 @@ export default function LargeWithNewsletter() {
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
             <Link href={"#"}>About us</Link>
-
             <Link href={"#"}>Pricing</Link>
             <Link href={"#"}>Testimonials</Link>
           </Stack>
@@ -111,7 +112,7 @@ export default function LargeWithNewsletter() {
             <Link href={"#"}>Privacy Policy</Link>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Join our newsletter</ListHeader>
+            <ListHeader>Join our Newsletter</ListHeader>
             <Stack direction={"row"}>
               <Input
                 placeholder={"Your email address"}

@@ -76,7 +76,7 @@ export default function MyGoal() {
           {/* --> Heading <-- */}
           <Stack align={"center"} p={6} bgGradient="linear(to-l, #7F7FD5, #91EAE4)" bgClip="text">
             <Heading align={"center"} fontSize={"4xl"}>
-              {`Calculate your SIP`}
+              {`Calculate your Returns`}
             </Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
               in less than 30 seconds
@@ -181,8 +181,8 @@ export default function MyGoal() {
                         <Text fontSize={"xl"} fontWeight={"semibold"}>
                           By investing{" "}
                         </Text>
-                        <Heading>{`₹${investment.toLocaleString("en-IN")} /month`}</Heading>
-                        <Text>{`You would have a net worth of Rs.${table[table.length - 1].finalValue.toLocaleString("en-IN")} in ${maxAge} years `}</Text>
+                        <Heading>{`$${investment.toLocaleString("en-IN")} /month`}</Heading>
+                        <Text>{`You would have a net worth of $${table[table.length - 1].finalValue.toLocaleString("en-IN")} in ${maxAge} years `}</Text>
                       </Stack>
                     </Box>
                     <Box rounded={"lg"} bg={"white"} boxShadow={"lg"} p={8}>
@@ -203,8 +203,8 @@ export default function MyGoal() {
                               <Tr>
                                 <Td fontWeight={"bold"}>Net Worth</Td>
 
-                                <Td>₹{table[1].finalValue.toLocaleString("en-IN")}</Td>
-                                <Td isNumeric>₹{table[table.length - 1].finalValue.toLocaleString("en-IN")}</Td>
+                                <Td>${table[1].finalValue.toLocaleString("en-CA")}</Td>
+                                <Td isNumeric>${table[table.length - 1].finalValue.toLocaleString("en-CA")}</Td>
                               </Tr>
                             </Tbody>
                           </Table>
@@ -231,8 +231,8 @@ export default function MyGoal() {
                                 return (
                                   <Tr>
                                     <Td>{data.months / 12}</Td>
-                                    <Td>₹{data.earnings.toLocaleString("en-IN")}</Td>
-                                    <Td fontWeight={"semibold"}>₹{data.finalValue.toLocaleString("en-IN")}</Td>
+                                    <Td>${data.earnings.toLocaleString("en-CA")}</Td>
+                                    <Td fontWeight={"semibold"}>${data.finalValue.toLocaleString("en-CA")}</Td>
                                   </Tr>
                                 );
                               })}
