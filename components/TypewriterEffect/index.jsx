@@ -7,9 +7,9 @@ export const TypewritterEffect = () => {
       <Typewriter
         options={{
           strings: [
-            "Planning your retirement",
-            "Renovating your kitchen",
-            "Going on your dream vacation",
+            "Planning your retirement?",
+            "Renovating your kitchen?",
+            "Going on your dream vacation?",
           ],
           autoStart: true,
           loop: true,
