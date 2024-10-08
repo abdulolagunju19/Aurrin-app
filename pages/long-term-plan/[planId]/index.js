@@ -210,7 +210,7 @@ export default function MyGoal() {
                     </FormControl>
                     {/* Annual contribution from other sources */}
                     <FormControl>
-                      <FormLabel>Annual contribution from other sources</FormLabel>
+                      <FormLabel>Annual Contribution from other Sources</FormLabel>
                       <HStack>
                         <NumberInput
                           min={1}
@@ -230,7 +230,7 @@ export default function MyGoal() {
                     </FormControl>
                     {/* Current Amount of savings */}
                     <FormControl>
-                      <FormLabel>Current Amount of savings</FormLabel>
+                      <FormLabel>Current Amount of Savings</FormLabel>
                       <HStack>
                         <NumberInput
                           min={1}
