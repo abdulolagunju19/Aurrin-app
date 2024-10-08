@@ -11,7 +11,7 @@ const MenuCustom = ({ isMenuOpen }) => {
     <div>
       <Menu isOpen={isMenuOpen}>
         <MenuButton as={Button} variant={"outline"} colorScheme={"blue"} size={"sm"} mr={4} leftIcon={<AddIcon />}>
-          New Goal
+          Services
         </MenuButton>
         <MenuList>
           <MenuGroup title="I want to plan my">
@@ -22,32 +22,6 @@ const MenuCustom = ({ isMenuOpen }) => {
             </Link>
           </MenuGroup>
           <MenuDivider />
-          <MenuGroup title="I want to calculate my">
-            <Link href="/returns">
-              <MenuItem>
-                Returns
-              </MenuItem>
-            </Link>
-          </MenuGroup>
-          <MenuDivider />
-          <MenuGroup title="I want to purchase a new">
-          <Link href="/purchase-plan/product">
-            <MenuItem>
-              Product
-              <Spacer />
-              <Text fontWeight={"semibold"} color={"gray.300"} fontSize={".8rem"}>
-                Car, Home{" "}
-              </Text>
-            </MenuItem>
-          </Link>
-        </MenuGroup>
-        </MenuList>
-      </Menu>
-      <Menu isOpen={isMenuOpen}>
-        <MenuButton as={Button} variant={"outline"} colorScheme={"blue"} size={"sm"} mr={4} leftIcon={<AddIcon />}>
-          Services
-        </MenuButton>
-        <MenuList>
           <MenuGroup title="I want to find the right">
             <Link href="/map">
               <MenuItem>
